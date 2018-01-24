@@ -68,6 +68,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// The color of the dropdown rows separators (horizontal).
 @property (nullable, strong, nonatomic) UIColor *rowSeparatorColor UI_APPEARANCE_SELECTOR;
+  
+/// The color of the dropdown rows separators (horizontal).
+@property (nullable, strong, nonatomic) UIColor *borderColor UI_APPEARANCE_SELECTOR;
 
 /// The view to place between header component and dropdown (like an arrow in popover). The height of the view's frame is preserved, and the view itself is stretched to fit the witdth of the dropdown.
 @property (nullable, strong, nonatomic) UIView *spacerView;

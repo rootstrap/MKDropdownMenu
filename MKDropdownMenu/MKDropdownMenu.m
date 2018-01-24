@@ -1369,8 +1369,13 @@ static const CGFloat kScrollViewBottomSpace = 5;
     UIColor *separatorColor = rowSeparatorColor ? rowSeparatorColor : [UIColor mk_defaultSeparatorColor];
     self.contentViewController.tableView.separatorColor = separatorColor;
     self.contentViewController.tableView.tableHeaderView.backgroundColor = separatorColor;
-    self.contentViewController.borderLayer.strokeColor = separatorColor.CGColor;
 }
+  
+  - (void)setBorderColor:(UIColor *)borderColor {
+    _borderColor = borderColor;
+    UIColor *dropBorderColor = borderColor ? borderColor : [UIColor mk_defaultSeparatorColor];
+    self.contentViewController.borderLayer.strokeColor = dropBorderColor.CGColor;
+  }
 
 - (void)setSpacerView:(UIView *)spacerView {
     _spacerView = spacerView;
